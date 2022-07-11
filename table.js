@@ -1,8 +1,10 @@
 $(document).ready(function(){
 
-    function f() {
-        console.log( Student )
+    var studentLog = function() {
+        console.log( Student );
     };
+
+    studentLog();
 
 });
 
