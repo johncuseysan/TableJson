@@ -1,4 +1,4 @@
-var Student = [
+var students = [
     {
         name : "Pete Johnson",
         age : 18,
@@ -10,8 +10,13 @@ var Student = [
         age : 23,
         dept : "HIS",
         score : 87
+    },
+    {
+        grade: 10
     }
 ];
+
+module.exports.students = students;
 
     
     
