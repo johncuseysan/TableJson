@@ -14,3 +14,4 @@
 * [How to fix "cannot use import statement outside a module](https://flaviocopes.com/fix-cannot-use-import-outside-module/)
 * [JavaScript Modules with Import/Export Syntax (ES6) - JavaScript Tutorial](https://www.youtube.com/watch?v=s9kNndJLOjg)
 * [Debug node js vscode using inspect! Learn to use a debugger with node. Tutorial in javascript](https://www.youtube.com/watch?v=FMsNsSHhRC8)
+* [Write a line into a .txt file with Node.js](https://stackoverflow.com/questions/33418777/write-a-line-into-a-txt-file-with-node-js)
