@@ -1,5 +1,5 @@
-var db = require("./database");
-var Header = require("./header");
+var db = require("../js/database");
+var Header = require("../js/header");
 
 console.log("PROGRAM STARTED");
 
