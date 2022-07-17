@@ -15,13 +15,14 @@ app.get("/", (req, res) => {
     res.render('index');
 })
 
+// http://localhost:3000/raw_table
 app.get("/raw_table", (req, res) => {
 
     var header = new Header(db.students);
     header.buildHeaderList();
     header.buildTableList();
 
-    var table = header.getTable();
+    var table_header = header.getTable();
 
     var page = "";
 
@@ -34,7 +35,7 @@ app.get("/raw_table", (req, res) => {
 
     page = page + "<h1>Cusey Org</h1>";
 
-    page = page + "<table>"+ table +"</table>"
+    page = page + "<table>"+ table_header +"</table>"
 
     res.send(page);
 })
