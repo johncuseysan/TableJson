@@ -1,17 +1,17 @@
 class Header{
 
-    constructor(students,message) {
+    constructor(students) {
         this.table_header = new Set();
 
         this.students = students;
-        this.message = message;
+        this.table = "";
     }
 
     setTableHeader(val){this.table_header = val;}
     getTableHeader() {return this.table_header;}
 
-    setMessage(val){this.message = val;}
-    getMessage() {return this.message;}
+    setTable(val){this.table = val;}
+    getTable() {return this.table;}
 
     setStudents(val){this.students = val;}
     getStudents() {return this.students;}
@@ -33,6 +33,19 @@ class Header{
             });
         }
     } 
+
+    buildTableList(){
+
+        this.table = this.table + "<tr>";
+
+        for (var element of this.table_header) {
+
+            this.table = this.table + "<td>" + element +"</td>";
+        }
+
+        this.table = this.table + "<tr>";
+
+    }
 
 }
 
