@@ -4,7 +4,9 @@ const express = require("express")
 const app = express()
 
 var db = require("./public/js/database");
+
 var Header = require("./public/js/header");
+var Body = require("./public/js/body");
 
 app.use(express.static(__dirname));
 
@@ -24,6 +26,11 @@ app.get("/raw_table", (req, res) => {
 
     var table_header = header.getTable();
 
+    var body = new Body(header.getTableHeader(), db.students);
+    body.buildBodyList();
+
+    var table_body = body.getTable();
+
     var page = "";
 
     page = page + `<style>
@@ -35,7 +42,7 @@ app.get("/raw_table", (req, res) => {
 
     page = page + "<h1>Cusey Org</h1>";
 
-    page = page + "<table>"+ table_header +"</table>"
+    page = page + "<table>"+ table_header + table_body +"</table>"
 
     res.send(page);
 })

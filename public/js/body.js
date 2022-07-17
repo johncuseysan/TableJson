@@ -23,8 +23,6 @@ class Body{
 
     buildBodyList(){
 
-        console.log("*** buildBodyList \n");
-
         if( ! Array.isArray(this.table_header) ){
 
             //Converting Set to Array
@@ -34,12 +32,16 @@ class Body{
 
         for(var m=0; m <this.students.length; m++ ){
 
-            //This is the JSON Data from the database.js
+            //Stepping though JSON Array to get the object from the database.js
+            //element[0] =  {name : "Pete Johnson",age : 18,dept : "CSE",score : 90}
             var element = this.students[m];
 
             this.table = this.table + "<tr>";
 
             for(var i=0; i <this.table_header.length; i++ ){
+
+                //This is array of all keys from the Header Set
+                //table_header = ['name', 'age', 'dept', 'score', 'grade']
 
                 var table_data = element[this.table_header[i]];
 
