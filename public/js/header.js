@@ -40,7 +40,7 @@ class Header{
 
         for (var element of this.table_header) {
 
-            this.table = this.table + "<td>" + element +"</td>";
+            this.table = this.table + "<th>" + element +"</th>";
         }
 
         this.table = this.table + "<tr>";
