@@ -1,3 +1,5 @@
+<img src="https://github.com/johncuseysan/GettingStarted/blob/main/SanBanner.png" alt="John Cusey Sandbox Logo" height="150" width="1000">
+
 # Table Json
 
 # Introduction     
@@ -38,6 +40,23 @@ This project is about taking a JavaScript Object Notation (JSON) object Array to
 </table>
 
 ```
+# Run the Application 
+
+## Download Packages
+
+```
+$ npm install
+```
+
+## Start the web server
+
+```
+$ npm run devStart
+```
+
+<img src="https://github.com/johncuseysan/GettingStarted/blob/main/RepositoriesImages/TableJson/webpage.png" alt="
+webpage" height="100" width="100">
+
 
 
 # Tutorials    
