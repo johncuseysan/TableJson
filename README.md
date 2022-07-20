@@ -55,7 +55,7 @@ $ npm run devStart
 ```
 
 <img src="https://github.com/johncuseysan/GettingStarted/blob/main/RepositoriesImages/TableJson/webpage.png" alt="
-webpage" height="100" width="100">
+webpage" height="300" width="300">
 
 
 
