@@ -9,6 +9,7 @@ This project is about taking a JavaScript Object Notation (JSON) object Array to
 ## JSON Database      
 [Database](https://github.com/johncuseysan/TableJson/blob/main/public/js/database.js)
 
+## Table HTML     
 ```HTML
 
 <table>
