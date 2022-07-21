@@ -6,6 +6,9 @@
 
 This project is about taking a JavaScript Object Notation (JSON) object Array to build a webpage's Hypertext Markup Language (HTML) table. In JSON object Array, the key fields make up the header in the table. The keys do not have to be identical in each JSON object in the Array. This program will Iterate through the Array of each object key and put it into a set. Set Data Structure will only let you add elements if not contained in the Set when the program iterates through array objects again to add data to the table. After the program gathers the necessary information to build the table, it will insert the webpage. I have a  separate JavaScrip file called database.js, which stores the JSON information. This program is just a prototype, but in the future, the data can put in a database. I  recommend using a  MySQL database. See below insert table. 
 
+## JSON Database      
+[Database](https://github.com/johncuseysan/TableJson/blob/main/public/js/database.js)
+
 ```HTML
 
 <table>
