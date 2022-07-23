@@ -12,36 +12,40 @@ This project is about taking a JavaScript Object Notation (JSON) object Array to
 ## Table HTML     
 ```HTML
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Age</th>
-    <th>Dept</th>
-    <th>Score</th>
-    <th>Grade</th>
-  </tr>
-  <tr>
-    <td>Pete Johnson</td>
-    <td>18</td>
-    <td>CSE</td>
-    <td>90</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Tom Smith</td>
-    <td>23</td>
-    <td>HIS</td>
-    <td>87</td>
-    <td></td>
-  </tr>
-    <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td>10</td>
-  </tr>
-</table>
+            <table id="table_student" class="display">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Dept</th>
+                        <th>Score</th>
+                        <th>Grade</th>
+                      </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Pete Johnson</td>
+                        <td>18</td>
+                        <td>CSE</td>
+                        <td>90</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>Tom Smith</td>
+                        <td>23</td>
+                        <td>HIS</td>
+                        <td>87</td>
+                        <td></td>
+                      </tr>
+                        <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>10</td>
+                      </tr>
+                </tbody>
+            </table>
 
 ```
 # Run the Application 
