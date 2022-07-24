@@ -65,7 +65,13 @@ $ npm run devStart
 <img src="https://github.com/johncuseysan/GettingStarted/blob/main/RepositoriesImages/TableJson/webpage.png" alt="
 webpage" height="300" width="300">
 
+# Table Update
 
+# JavaScrip Libraries      
+* [JQuery](https://jquery.com/)   
+* [DataTable](https://datatables.net/)   
+* [JQuery UI](https://jqueryui.com/)   
+* [Bootstrap](https://getbootstrap.com/)   
 
 # Tutorials    
 
