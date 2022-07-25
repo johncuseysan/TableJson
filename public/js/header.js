@@ -43,7 +43,7 @@ class Header{
             this.table = this.table + "<th>" + element +"</th>";
         }
 
-        this.table = this.table + "<tr>";
+        this.table = this.table + "</tr>";
 
     }
 

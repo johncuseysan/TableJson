@@ -1,4 +1,4 @@
-
+page = `
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,7 +36,7 @@
 
             <table id="table_student" class="display">
                 <thead>
-                    <tr><th>name</th><th>age</th><th>dept</th><th>score</th><th>grade</th></tr>
+                    <tr><th>Replace</th></tr>
                 </thead>
                 <tbody>
                 </tbody>
@@ -48,3 +48,6 @@
     </body>
 
 </html>
+`;
+
+module.exports.page = page;
