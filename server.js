@@ -59,9 +59,21 @@ app.get("/save", (req, res) => {
     parse.buildIndex();
     parse.buildTags();
 
-    console.log("File Length: " + parse.getTags().length );
+    var tags = parse.getTags();
 
+    console.log("File Length: " + tags.length );
 
+    var thead_front = tags.findIndex( x => x == "<thead>");
+    console.log("Index of <thead> : " + thead_front );
+
+    var thead_end = tags.findIndex( x => x == "</thead>");
+    console.log("Index of </thead> : " + thead_end );
+
+    var tbody_front = tags.findIndex( x => x == "<tbody>");
+    console.log("Index of <tbody> : " + tbody_front );
+
+    var tbody_end = tags.findIndex( x => x == "</tbody>");
+    console.log("Index of </tbody> : " + tbody_end );
 
     res.send("HELLO");
 
