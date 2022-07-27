@@ -62,7 +62,7 @@ $ npm install
 $ npm run devStart
 ```
 
-<img src="https://github.com/johncuseysan/GettingStarted/blob/main/RepositoriesImages/TableJson/raw_api.png" alt="Raw API" height="300" width="300">
+<img src="https://github.com/johncuseysan/GettingStarted/blob/main/RepositoriesImages/TableJson/raw_api.png" alt="Raw API" height="300" width="400">
 
 <img src="https://github.com/johncuseysan/GettingStarted/blob/main/RepositoriesImages/TableJson/home_api.png" alt="Home API" height="300" width="550">
 
