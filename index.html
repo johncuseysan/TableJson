@@ -1,53 +1,118 @@
-
 <!DOCTYPE html>
 <html lang="en">
+<head>
+<meta charset="UTF-8">
+<!-- JQuery -->
+<script type="text/javascript" src="public/JQuery/jquery-3.6.0.min.js">
 
-    <head>
-        <meta charset="UTF-8">
+</script>
+<!-- Bootstrap 5 -->
+<link rel="stylesheet" type="text/css" href="public/bootstrap-5.2.0-dist/css/bootstrap.min.css" >
 
-        <!-- JQuery -->
-        <script type="text/javascript" src="public/JQuery/jquery-3.6.0.min.js"></script>
+</link>
+<link href="public/bootstrap-5.2.0-dist/css/bootstrap-grid.rtl.min.css" rel="stylesheet">
 
-        <!-- Bootstrap 5 -->
-        <link rel="stylesheet" type="text/css" href="public/bootstrap-5.2.0-dist/css/bootstrap.min.css" ></link>
-        <link href="public/bootstrap-5.2.0-dist/css/bootstrap-grid.rtl.min.css" rel="stylesheet"></link>
-        <script type="text/javascript" src="public/bootstrap-5.2.0-dist/js/bootstrap.min.js"></script>
+</link>
+<script type="text/javascript" src="public/bootstrap-5.2.0-dist/js/bootstrap.min.js">
 
-        <!-- DataTables -->
-        <link rel="stylesheet" type="text/css" href="public/DataTables/datatables.min.css"/>
-        <script type="text/javascript" src="public/DataTables/datatables.min.js"></script>
+</script>
+<!-- DataTables -->
+<link rel="stylesheet" type="text/css" href="public/DataTables/datatables.min.css"/>
+<script type="text/javascript" src="public/DataTables/datatables.min.js">
 
+</script>
+<script>
 
-        <script>
             $(document).ready(function () {
                 $('#table_student').DataTable();
             });
-        </script>
+        
+</script>
+<title>
+John Cusey Sandbox
+</title>
+
+    
+</head>
+<body>
+<div class="container">
+<h1>
+Table
+</h1>
+<table id="table_student" class="display">
+<thead>
+<tr> 
+
+<th>name</th> 
+
+<th>age</th> 
+
+<th>dept</th> 
+
+<th>score</th> 
+
+<th>grade</th> 
+
+</tr> 
+
+</thead>
+<tbody>
+<tr> 
+
+<td>Pete Johnson</td> 
+
+<td>18</td> 
+
+<td>CSE</td> 
+
+<td>90</td> 
+
+<td></td> 
+
+</tr> 
+
+<tr> 
+
+<td>Tom Smith</td> 
+
+<td>23</td> 
+
+<td>HIS</td> 
+
+<td>87</td> 
+
+<td></td> 
+
+</tr> 
+
+<tr> 
+
+<td></td> 
+
+<td></td> 
+
+<td></td> 
+
+<td></td> 
+
+<td>10</td> 
+
+</tr> 
+
+</tbody>
+
+            
+</table>
 
 
-        <title>John Cusey Sandbox</title>
-    </head>
+        
+</div>
 
-    <body>
-
-        <div class="container">
-
-            <h1>Table</h1>
-
-            <table id="table_student" class="display">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Age</th>
-                      </tr>
-                </thead>
-                <tbody>
-                </tbody>
-            </table>
-
-        </div>
        
 
-    </body>
+    
+</body>
+
+
 
 </html>

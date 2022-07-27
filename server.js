@@ -37,22 +37,22 @@ app.get("/save", (req, res) => {
     header.buildHeader();
     var table_header = header.toArray();
 
-    console.log("Table Header: \n");
+    //console.log("Table Header: \n");
 
     for(var m = 0; m < table_header.length; m++){
-        console.log(table_header[m]);
+        //console.log(table_header[m]);
     }
 
     var body = new Body(header.getTableHeader(), db.students);
     var table_body = body.toArray();
 
-    console.log("Table Body: \n");
+    //console.log("Table Body: \n");
 
     for(var m = 0; m < table_body.length; m++){
-        console.log(table_body[m]);
+        //console.log(table_body[m]);
     }
 
-
+    //var parse = new ParseHtml("index_table.html","");
     var parse = new ParseHtml("index.html","");
 
     parse.readFile();
@@ -61,23 +61,47 @@ app.get("/save", (req, res) => {
 
     var tags = parse.getTags();
 
-    console.log("File Length: " + tags.length );
+    //console.log("File Length: " + tags.length );
 
     var thead_front = tags.findIndex( x => x == "<thead>");
-    console.log("Index of <thead> : " + thead_front );
+    //console.log("Index of <thead> : " + thead_front );
 
     var thead_end = tags.findIndex( x => x == "</thead>");
-    console.log("Index of </thead> : " + thead_end );
+    //console.log("Index of </thead> : " + thead_end );
 
     var tbody_front = tags.findIndex( x => x == "<tbody>");
-    console.log("Index of <tbody> : " + tbody_front );
+    //console.log("Index of <tbody> : " + tbody_front );
 
     var tbody_end = tags.findIndex( x => x == "</tbody>");
-    console.log("Index of </tbody> : " + tbody_end );
+    //console.log("Index of </tbody> : " + tbody_end );
 
-    res.send("HELLO");
+    var top = tags.slice(0, thead_front + 1);
+    var bottom = tags.slice(tbody_end + 1);
 
- 
+    var new_top = top.concat(table_header);
+
+    new_top.splice(new_top.length +1 , 0, "</thead>", "<tbody>");
+
+    var new_bottom = new_top.concat(table_body);
+
+    new_bottom.splice(new_bottom.length + 1 , 0,  "</tbody>");
+
+    var finial = new_bottom.concat(bottom);
+
+    var page = "";
+
+    //console.log("*** TABLE ***");
+    for(var u=0; u< finial.length; u++){
+        //console.log("["+u+"] " + finial[u] );
+
+        page = page + finial[u] +"\n";
+
+    }
+
+    fs.writeFileSync("index.html", page);
+
+
+    res.send("File written successfully");
 })
 
 // http://localhost:3000/raw
@@ -88,12 +112,12 @@ app.get("/raw", (req, res) => {
     header.buildHeader();
     var table_header = header.toString();
 
-    console.log("Table Header: \n" + table_header );
+    //console.log("Table Header: \n" + table_header );
 
     var body = new Body(header.getTableHeader(), db.students);
     var table_body = body.toString();
 
-    console.log("Table Body: \n" + table_body );
+    //console.log("Table Body: \n" + table_body );
 
     var page = "";
 
