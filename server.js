@@ -9,10 +9,11 @@ const express = require("express")
 const app = express()
 
 var db = require("./public/js/database");
-var template = require("./public/js/template");
 
 var Header = require("./public/js/header");
 var Body = require("./public/js/body");
+
+var ParseHtml = require("./public/js/parse_html");
 
 app.use(express.static(__dirname));
 
@@ -32,30 +33,38 @@ app.get("/", (req, res) => {
 app.get("/save", (req, res) => {
 
     var header = new Header(db.students);
-    header.buildHeaderList();
-    header.buildTableString();
 
-    var table_header = header.getTable();
+    header.buildHeader();
+    var table_header = header.toArray();
 
-    console.log("Header: " + table_header );
+    console.log("Table Header: \n");
+
+    for(var m = 0; m < table_header.length; m++){
+        console.log(table_header[m]);
+    }
 
     var body = new Body(header.getTableHeader(), db.students);
-    body.buildBodyList();
+    var table_body = body.toArray();
 
-    var table_body = body.getTable();
+    console.log("Table Body: \n");
 
-    var website = template.page;
-    var result = website.replace("<tr><th>Replace</th></tr>", table_header );
+    for(var m = 0; m < table_body.length; m++){
+        console.log(table_body[m]);
+    }
 
-    fs.writeFile('./index.html', result, { flag: 'w+' }, err => {
 
-        if (err) {
-            res.send(error);
-        }else{
-            res.send("File written successfully");
-        }
-              
-    });
+    var parse = new ParseHtml("index.html","");
+
+    parse.readFile();
+    parse.buildIndex();
+    parse.buildTags();
+
+    console.log("File Length: " + parse.getTags().length );
+
+
+
+    res.send("HELLO");
+
  
 })
 
@@ -65,14 +74,14 @@ app.get("/raw", (req, res) => {
     var header = new Header(db.students);
 
     header.buildHeader();
-
     var table_header = header.toString();
 
-    console.log("Header: " + table_header );
+    console.log("Table Header: \n" + table_header );
 
     var body = new Body(header.getTableHeader(), db.students);
-
     var table_body = body.toString();
+
+    console.log("Table Body: \n" + table_body );
 
     var page = "";
 

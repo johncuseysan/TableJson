@@ -31,14 +31,14 @@ class Header{
 
     toString(){
 
-        var table =  "<tr>";
+        var table =  "<tr> \n";
 
         for (var element of this.table_header) {
 
-            table = table + "<th>" + element +"</th>";
+            table = table + "<th>" + element +"</th> \n";
         }
 
-        table = table + "</tr>";
+        table = table + "</tr> \n";
 
         return table;
 
@@ -46,14 +46,18 @@ class Header{
 
     toArray(){
 
-        this.table = this.table + "<tr>";
+        var table = new Array();
+
+        table.push("<tr> \n");
 
         for (var element of this.table_header) {
 
-            this.table = this.table + "<th>" + element +"</th>";
+            table.push("<th>" + element +"</th> \n");
         }
 
-        this.table = this.table + "</tr>";
+        table.push("</tr> \n");
+
+        return table;
 
     }
 

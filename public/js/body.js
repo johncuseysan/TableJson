@@ -33,7 +33,7 @@ class Body{
             //element[0] =  {name : "Pete Johnson",age : 18,dept : "CSE",score : 90}
             var element = this.students[m];
 
-            table = table + "<tr>";
+            table = table + "<tr> \n";
 
             for(var i=0; i <this.table_header.length; i++ ){
 
@@ -43,14 +43,58 @@ class Body{
                 var table_data = element[this.table_header[i]];
 
                 if (table_data === undefined || table_data === null){
-                    table = table + "<td></td>";
+                    table = table + "<td></td> \n";
                 }else{
-                    table = table + "<td>" + table_data + "</td>";
+                    table = table + "<td>" + table_data + "</td> \n";
                 }
 
             }
 
             table = table + "</tr> \n";
+
+            
+            
+        }
+
+        return table;
+
+    }
+
+
+    toArray(){
+
+        if( ! Array.isArray(this.table_header) ){
+
+            //Converting Set to Array
+            this.table_header = Array.from(this.table_header);
+        }
+
+        var table = new Array();
+
+        for(var m=0; m <this.students.length; m++ ){
+
+            //Stepping though JSON Array to get the object from the database.js
+            //element[0] =  {name : "Pete Johnson",age : 18,dept : "CSE",score : 90}
+            var element = this.students[m];
+
+            table.push("<tr> \n");
+
+            for(var i=0; i <this.table_header.length; i++ ){
+
+                //This is array of all keys from the Header Set
+                //table_header = ['name', 'age', 'dept', 'score', 'grade']
+
+                var table_data = element[this.table_header[i]];
+
+                if (table_data === undefined || table_data === null){
+                    table.push("<td></td> \n");
+                }else{
+                    table.push("<td>" + table_data + "</td> \n");
+                }
+
+            }
+
+            table.push("</tr> \n");
 
             
             
