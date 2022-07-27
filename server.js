@@ -23,8 +23,8 @@ app.set("view engine","ejs");
  * API                *
 \*********************/
 
-// http://localhost:3000
-app.get("/", (req, res) => {
+// http://localhost:3000/home
+app.get("/home", (req, res) => {
 
     res.render('index');
 });
