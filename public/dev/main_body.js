@@ -12,7 +12,7 @@ console.log(db.students);
 /***  Get The Keys from the Database Array Objects ***/
 var header = new Header(db.students);
 
-header.buildHeaderList();
+header.buildHeader();
 
 console.log(" Header list from the Database \n");
 console.log(header.getTableHeader());
@@ -20,7 +20,6 @@ console.log(header.getTableHeader());
 /*** ***/
 var body = new Body(header.getTableHeader(), db.students);
 
-body.buildBodyList();
 
 console.log(" Data list from the Database \n");
-console.log(body.getTable());
+console.log(body.toString());

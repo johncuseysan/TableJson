@@ -33,7 +33,7 @@ app.get("/save", (req, res) => {
 
     var header = new Header(db.students);
     header.buildHeaderList();
-    header.buildTableList();
+    header.buildTableString();
 
     var table_header = header.getTable();
 
@@ -63,17 +63,16 @@ app.get("/save", (req, res) => {
 app.get("/raw", (req, res) => {
 
     var header = new Header(db.students);
-    header.buildHeaderList();
-    header.buildTableList();
 
-    var table_header = header.getTable();
+    header.buildHeader();
+
+    var table_header = header.toString();
 
     console.log("Header: " + table_header );
 
     var body = new Body(header.getTableHeader(), db.students);
-    body.buildBodyList();
 
-    var table_body = body.getTable();
+    var table_body = body.toString();
 
     var page = "";
 

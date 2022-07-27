@@ -5,7 +5,6 @@ class Body{
         this.table_body = new Array();
     
         this.students = students;
-        this.table = "";
     }
 
     setTableHeader(val){this.table_header = val;}
@@ -14,14 +13,11 @@ class Body{
     setTableBody(val){this.table_body = val;}
     getTableBody() {return this.table_body;}
 
-    setTable(val){this.table = val;}
-    getTable() {return this.table;}
-
     setStudents(val){this.students = val;}
     getStudents() {return this.students;}
 
 
-    buildBodyList(){
+    toString(){
 
         if( ! Array.isArray(this.table_header) ){
 
@@ -29,6 +25,7 @@ class Body{
             this.table_header = Array.from(this.table_header);
         }
 
+        var table = "";
 
         for(var m=0; m <this.students.length; m++ ){
 
@@ -36,7 +33,7 @@ class Body{
             //element[0] =  {name : "Pete Johnson",age : 18,dept : "CSE",score : 90}
             var element = this.students[m];
 
-            this.table = this.table + "<tr>";
+            table = table + "<tr>";
 
             for(var i=0; i <this.table_header.length; i++ ){
 
@@ -46,17 +43,20 @@ class Body{
                 var table_data = element[this.table_header[i]];
 
                 if (table_data === undefined || table_data === null){
-                    this.table = this.table + "<td></td>";
+                    table = table + "<td></td>";
                 }else{
-                    this.table = this.table + "<td>" + table_data + "</td>";
+                    table = table + "<td>" + table_data + "</td>";
                 }
 
             }
 
-            this.table = this.table + "</tr> \n";
+            table = table + "</tr> \n";
 
             
+            
         }
+
+        return table;
 
     }
 
