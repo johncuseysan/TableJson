@@ -1,24 +1,24 @@
 class Header{
 
-    constructor(students) {
+    constructor(data) {
         this.table_header = new Set();
-        this.students = students;
+        this.data = data;
     }
 
     setTableHeader(val){this.table_header = val;}
     getTableHeader() {return this.table_header;}
 
-    setStudents(val){this.students = val;}
-    getStudents() {return this.students;}
+    setData(val){this.data = val;}
+    getData() {return this.data;}
 
     buildHeader(){
 
         //Getting the objects from the database.js student (Array of Objects)
         //Loop though th objects in the Array
-        for( var i = 0; i < this.students.length; i++ ){
+        for( var i = 0; i < this.data.length; i++ ){
 
             // Get key for each Object. Returns Arrays of keys
-            var studentArray = Object.keys(this.students[i]);
+            var studentArray = Object.keys(this.data[i]);
 
             //Going though the Array of keys adding to the Set
             studentArray.forEach(element => {

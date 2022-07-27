@@ -1,10 +1,10 @@
 class Body{
 
-    constructor(header, students) {
+    constructor(header, data) {
         this.table_header = header;
         this.table_body = new Array();
     
-        this.students = students;
+        this.data = data;
     }
 
     setTableHeader(val){this.table_header = val;}
@@ -13,8 +13,8 @@ class Body{
     setTableBody(val){this.table_body = val;}
     getTableBody() {return this.table_body;}
 
-    setStudents(val){this.students = val;}
-    getStudents() {return this.students;}
+    setData(val){this.data = val;}
+    getData() {return this.data;}
 
 
     toString(){
@@ -27,11 +27,11 @@ class Body{
 
         var table = "";
 
-        for(var m=0; m <this.students.length; m++ ){
+        for(var m=0; m <this.data.length; m++ ){
 
             //Stepping though JSON Array to get the object from the database.js
             //element[0] =  {name : "Pete Johnson",age : 18,dept : "CSE",score : 90}
-            var element = this.students[m];
+            var element = this.data[m];
 
             table = table + "<tr> \n";
 
@@ -71,11 +71,11 @@ class Body{
 
         var table = new Array();
 
-        for(var m=0; m <this.students.length; m++ ){
+        for(var m=0; m <this.data.length; m++ ){
 
             //Stepping though JSON Array to get the object from the database.js
             //element[0] =  {name : "Pete Johnson",age : 18,dept : "CSE",score : 90}
-            var element = this.students[m];
+            var element = this.data[m];
 
             table.push("<tr> \n");
 
