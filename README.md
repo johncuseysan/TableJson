@@ -62,8 +62,13 @@ $ npm install
 $ npm run devStart
 ```
 
-<img src="https://github.com/johncuseysan/GettingStarted/blob/main/RepositoriesImages/TableJson/webpage.png" alt="
-webpage" height="300" width="300">
+<img src="https://github.com/johncuseysan/GettingStarted/blob/main/RepositoriesImages/TableJson/raw_api.png" alt="Raw API" height="300" width="300">
+
+<img src="https://github.com/johncuseysan/GettingStarted/blob/main/RepositoriesImages/TableJson/home_api.png" alt="Home API" height="300" width="300">
+
+<img src="https://github.com/johncuseysan/GettingStarted/blob/main/RepositoriesImages/TableJson/save_api.png" alt="Save API" height="300" width="300">
+
+<img src="https://github.com/johncuseysan/GettingStarted/blob/main/RepositoriesImages/TableJson/local_file.png" alt="Local File" height="300" width="300">
 
 # Table Update
 
