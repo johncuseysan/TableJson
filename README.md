@@ -63,13 +63,13 @@ $ npm run devStart
 ```
 ## API's       
 
-<img src="https://github.com/johncuseysan/GettingStarted/blob/main/RepositoriesImages/TableJson/raw_api.png" alt="Raw API" height="300" width="400">
+<img src="https://github.com/johncuseysan/GettingStarted/blob/main/RepositoriesImages/TableJson/raw_api.png" alt="Raw API" height="500" width="600">
 
 ```
 http://localhost:3000/raw
 ```
 
-<img src="https://github.com/johncuseysan/GettingStarted/blob/main/RepositoriesImages/TableJson/home_api.png" alt="Home API" height="300" width="550">
+<img src="https://github.com/johncuseysan/GettingStarted/blob/main/RepositoriesImages/TableJson/home_api.png" alt="Home API" height="400" width="650">
 
 ```
 http://localhost:3000/home
@@ -85,7 +85,7 @@ http://localhost:3000/save
 
 When you click on the Html file in your local directory the browser will open.         
 
-<img src="https://github.com/johncuseysan/GettingStarted/blob/main/RepositoriesImages/TableJson/local_file.png" alt="Local File" height="300" width="550">
+<img src="https://github.com/johncuseysan/GettingStarted/blob/main/RepositoriesImages/TableJson/local_file.png" alt="Local File" height="400" width="650">
 
 
 
