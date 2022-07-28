@@ -61,16 +61,33 @@ $ npm install
 ```
 $ npm run devStart
 ```
+## API's       
 
 <img src="https://github.com/johncuseysan/GettingStarted/blob/main/RepositoriesImages/TableJson/raw_api.png" alt="Raw API" height="300" width="400">
 
+```
+http://localhost:3000/raw
+```
+
 <img src="https://github.com/johncuseysan/GettingStarted/blob/main/RepositoriesImages/TableJson/home_api.png" alt="Home API" height="300" width="550">
+
+```
+http://localhost:3000/home
+```
 
 <img src="https://github.com/johncuseysan/GettingStarted/blob/main/RepositoriesImages/TableJson/save_api.png" alt="Save API" height="200" width="500">
 
+```
+http://localhost:3000/save
+```
+
+## Local File   
+
+When you click on the Html file in your local directory the browser will open.         
+
 <img src="https://github.com/johncuseysan/GettingStarted/blob/main/RepositoriesImages/TableJson/local_file.png" alt="Local File" height="300" width="550">
 
-# Table Update
+
 
 # JavaScrip Libraries      
 * [JQuery](https://jquery.com/)   
