@@ -58,6 +58,39 @@ class ParsesHtml{
         }
 
     }
+
+    buildPage(table_header,table_body){
+
+        //console.log("File Length: " + this.tags.length );
+    
+        var thead_front = this.tags.findIndex( x => x == "<thead>");
+        //console.log("Index of <thead> : " + thead_front );
+    
+        var thead_end = this.tags.findIndex( x => x == "</thead>");
+        //console.log("Index of </thead> : " + thead_end );
+    
+        var tbody_front = this.tags.findIndex( x => x == "<tbody>");
+        //console.log("Index of <tbody> : " + tbody_front );
+    
+        var tbody_end = this.tags.findIndex( x => x == "</tbody>");
+        //console.log("Index of </tbody> : " + tbody_end );
+    
+        var top = this.tags.slice(0, thead_front + 1);
+        var bottom = this.tags.slice(tbody_end + 1);
+    
+        var new_top = top.concat(table_header);
+    
+        new_top.splice(new_top.length +1 , 0, "</thead>", "<tbody>");
+    
+        var new_bottom = new_top.concat(table_body);
+    
+        new_bottom.splice(new_bottom.length + 1 , 0,  "</tbody>");
+    
+        var result = new_bottom.concat(bottom);
+
+        return result;
+
+    }
 }
 
 
